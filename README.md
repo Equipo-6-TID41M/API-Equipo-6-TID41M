@@ -27,6 +27,7 @@ El uso es:
 https://chihuahuaapi.herokuapp.com/api/location/update/num/
 ```
 Donde "num" es el ID del lugar a modificar.
+
 --------------
 #### Para poder eliminar un lugar existente se requiere del ID del lugar:
 El uso es:
