@@ -35,7 +35,7 @@ def show_a_location(location_id):
 
 @app.route('/api/add_location/', methods=['POST'])
 def add_new_location():    
-    if len(request.json) == 6:
+    if len(request.json) == 7:
             db.db.chihuahua.insert_one({
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
