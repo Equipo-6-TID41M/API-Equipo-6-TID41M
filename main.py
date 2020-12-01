@@ -39,6 +39,7 @@ def add_new_location():
             db.db.chihuahua.insert_one({
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
+                "place_id":request.json["place_id"],
             })
     else:
         return jsonify({
@@ -58,6 +59,7 @@ def update_location(location_id):
             {'$set':{
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
+                "place_id":request.json["place_id"],
             }})
     else:
         return jsonify({'status':400, "message": f"El lugar {request.json['nombre']} no existe"})
