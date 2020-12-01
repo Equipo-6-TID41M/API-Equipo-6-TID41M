@@ -43,6 +43,7 @@ def add_new_location():
                 "teléfono":request.json["telefono"],
                 "descripcion":request.json["descripcion"],
                 "referencias":request.json["referencias"],
+                "place_id":request.json["place_id"],
             })
     else:
         return jsonify({
@@ -66,6 +67,7 @@ def update_location(location_id):
                 "telefono":request.json["telefono"],
                 "descripcion":request.json["descripcion"],
                 "referencias":request.json["referencias"],
+                "place_id":request.json["place_id"],
             }})
     else:
         return jsonify({'status':400, "message": f"El lugar {request.json['nombre']} no existe"})
