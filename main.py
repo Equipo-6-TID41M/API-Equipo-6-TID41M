@@ -39,6 +39,10 @@ def add_new_location():
             db.db.chihuahua.insert_one({
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
+                "dirección":request.json["direccion"],
+                "teléfono":request.json["telefono"],
+                "descripcion":request.json["descripcion"],
+                "referencias":request.json["referencias"],
                 "place_id":request.json["place_id"],
             })
     else:
@@ -59,6 +63,10 @@ def update_location(location_id):
             {'$set':{
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
+                "direccion":request.json["direccion"],
+                "telefono":request.json["telefono"],
+                "descripcion":request.json["descripcion"],
+                "referencias":request.json["referencias"],
                 "place_id":request.json["place_id"],
             }})
     else:
