@@ -76,7 +76,7 @@ def update_location(location_id):
     return jsonify({'status':200, "message": f"El lugar {request.json['nombre']} fue actualizado"})
 
 @app.route('/api/location/delete/<int:location_id>/', methods=['DELETE'])
-def delete_song(location_id):
+def delete_location(location_id):
     if db.db.chihuahua.find_one({'location_id' : request.json["location_id"]}):
             db.db.chihuahua.delete_one({'location_id' : request.json["location_id"]})
     else:
