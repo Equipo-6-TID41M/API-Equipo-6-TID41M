@@ -40,7 +40,7 @@ def add_new_location():
                 "location_id":request.json["location_id"],
                 "nombre":request.json["nombre"],
                 "ubicacion":request.json["ubicacion"],
-                "teléfono":request.json["telefono"],
+                "telefono":request.json["telefono"],
                 "descripcion":request.json["descripcion"],
                 "referencias":request.json["referencias"],
                 "imagen":request.json["imagen"],
