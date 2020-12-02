@@ -73,7 +73,7 @@ def update_location(location_id):
             }})
     else:
         return jsonify({'status':400, "message": f"El lugar {request.json['nombre']} no existe"})
-    return jsonify({'status':200, "message": f"El lugar de tipo {request.json['nombre']} fue actualizado"})
+    return jsonify({'status':200, "message": f"El lugar {request.json['nombre']} fue actualizado"})
 
 @app.route('/api/location/delete/<int:location_id>/', methods=['DELETE'])
 def delete_song(location_id):
